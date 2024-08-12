@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "extra-mod",
+	"version": "${version}",
+	"name": "Extra Mod",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Joel Kusi"
+	],
+	"contact": {
+		"homepage": "https://joelkkusi.dev/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/extra-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.joelkkusi.extra_mod.ExtraMod"
+		],
+		"fabric-datagen": [
+			"dev.joelkkusi.extra_mod.ExtraModDataGenerator"
+		],
+		"client": [
+			"dev.joelkkusi.extra_mod.ExtraModClient"
+		]
+	},
+	"mixins": [
+		"extra-mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
